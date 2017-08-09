@@ -11,15 +11,15 @@ class Runner
     @player1 = Player.new("David", 0, 29)
     @player2 = Player.new("Raul", 0, 29)
 
-    @snake1 = Tiles.new(true, 4)
-    @snake2 = Tiles.new(true, 12)
-    @snake3 = Tiles.new(true, 1)
+    @snake1 = Tiles.new(true, 4, :snake)
+    @snake2 = Tiles.new(true, 12, :snake)
+    @snake3 = Tiles.new(true, 1, :snake)
 
-    @ladder1 = Tiles.new(true, 6)
-    @ladder2 = Tiles.new(true, 15)
-    @ladder3 = Tiles.new(true, 17)
+    @ladder1 = Tiles.new(true, 6, :ladder)
+    @ladder2 = Tiles.new(true, 15, :ladder)
+    @ladder3 = Tiles.new(true, 17, :ladder)
 
-    @tile_normal = Tiles.new(false, 0)
+    @tile_normal = Tiles.new(false, 0, "nothing")
 
     @board = Board.new(
       [@player1, @player2],

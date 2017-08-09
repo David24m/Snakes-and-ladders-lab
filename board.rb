@@ -24,9 +24,9 @@ class Board
   def play_turn
     @turn.play_turn
     current_player_position = @turn.position
-    
-    puts "Current player playing: #{@turn.name}"
-    puts "Current player position: #{current_player_position}"
+
+    puts "Current player playing: #{@turn.name}, he is moving to tile #{current_player_position}"
+
 
     if @turn.check_win
       end_game
@@ -35,8 +35,9 @@ class Board
 
     if @tiles[current_player_position].special
       @turn.move_to(@tiles[current_player_position].end_position)
-      puts "Player hit a special tile; going to: #{@tiles[current_player_position].end_position}"
+      puts "#{@turn.name} hit a #{@tiles[current_player_position].type}; going to: #{@tiles[current_player_position].end_position}"
     end
+    puts
     next_turn
   end
 
