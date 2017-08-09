@@ -6,4 +6,4 @@ class TilesTest < MiniTest::Test
 
 
   def setup
-    Tiles.new
+    @tiles = Tiles.new()

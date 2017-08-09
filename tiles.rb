@@ -1,4 +1,4 @@
-class Tile
+class Tiles
 
   attr_accessor(:special, :end_position)
 

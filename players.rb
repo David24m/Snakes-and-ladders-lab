@@ -27,18 +27,10 @@ class Player
 
   end
 
-  # def play_turn()
-  #   movement = roll_dice + @position
-  #   puts "Moving to #{movement}"
-  #   move_to(movement)
-  #   if board.tiles[self.position].is_special
-  #     puts "I'm special"
-  #   end
-  # end
 
   def check_win()
     if @position >= @end_position
-      "Yay! I won"
+      # puts "#{@name} WIN!"
       return true
     end
     return false
