@@ -8,4 +8,13 @@ class Board
     @turn = players[0]
   end
 
+  def next_turn()
+    if @players.last == @turn
+      @turn = @players.first
+    else
+      current_index = @players.index(@turn)
+      @turn = @players[current_index + 1]
+    end
+  end
+
 end
