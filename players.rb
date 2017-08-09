@@ -2,12 +2,13 @@ require_relative("dice.rb")
 
 class Player
 
-  attr_accessor(:name, :position)
+  attr_accessor(:name, :position, :end_position)
 
-  def initialize(name, position)
+  def initialize(name, position, end_position)
     @name = name
     @position = position
     @dice = Dice.new(0)
+    @end_position = end_position
   end
 
   def move_to(position)
@@ -24,20 +25,13 @@ class Player
     move_to(movement)
   end
 
-  player = Player.new("Raul", 0)
-  player.play_turn
-  puts player.position
+  def check_win()
+    return true if @position >= @end_position
+    return false
+  end
 
-  player.play_turn
-  puts player.position
-
-  player.play_turn
-  puts player.position
-
-  player.play_turn
-  puts player.position
-
-  player.play_turn
-  puts player.position
+  # player = Player.new("Raul", 0)
+  # player.play_turn
+  # puts player.position
 
 end
