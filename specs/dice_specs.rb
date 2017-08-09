@@ -12,4 +12,8 @@ class DiceTest < MiniTest::Test
     assert_equal(0, @dice.number())
   end
 
+  def test_set_dice_number
+    assert_equal(3, @dice.number= 3)
+  end
+
 end
